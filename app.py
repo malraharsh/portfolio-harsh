@@ -62,12 +62,12 @@ info = f'''
 2. {title_blogs[1]}
 '''
 
-button = st.button('Know More')
-
+button = True #st.button('Know More')
+write(info)
 if not button:
     write(info)
 else:
-    st.button('Know Less')
+    # st.button('Know Less')
 
     for title, img, link in data_blogs:
 
@@ -83,7 +83,7 @@ else:
 
 
 do('Project ->')
-button = st.checkbox('More', value=True)
+button = True # st.checkbox('More', value=True)
 
 info = '''
 >
@@ -95,17 +95,17 @@ info = '''
 if button:
 
 
-    n = st.slider('No. of Projects (not updated)', 3, 8, value=3)
+    # n = st.slider('No. of Projects (not updated)', 3, 8, value=3)
 
 
 
     write(info)
     # more = st.button('Know More')
-    more = st.checkbox('Know More')
+    more = True #st.checkbox('Know More')
 
-    if more:
-
-        project_title = st.selectbox('Select the Project ->', projects_titles)
+    # if more:
+    for project_title in projects_titles:
+        # project_title = st.selectbox('Select the Project ->', projects_titles)
             
         idx = projects_titles.index(project_title)
         img = project_data[idx]['image']
@@ -121,7 +121,7 @@ if button:
 ##############################################
 
 do('Education')
-button = st.checkbox('Show', value=True, key='1')
+button = True #st.checkbox('Show', value=True, key='1')
 
 info = '''
 >
@@ -174,22 +174,22 @@ write(info)
 ##############################################
 
 # Contact Me
-do('Contact Me -')
+# do('Contact Me -')
 
 
-contacts = ('LinkedIn', 'Github')#, 'G-Mail', 'Mobile')
+# contacts = ('LinkedIn', 'Github')#, 'G-Mail', 'Mobile')
 
-contact = st.radio("How do you want to Connect", contacts)
+# contact = st.radio("How do you want to Connect", contacts)
 
 
-idx = contacts.index(contact)
+# idx = contacts.index(contact)
 
-idx2info = {0: [img_li, link_li],
-            1: [img_github, link_github],
-            # 2: [img_gmail, link_gmail],
-            # 3: [img_mobile, link_mobile]
-            }
+# idx2info = {0: [img_li, link_li],
+#             1: [img_github, link_github],
+#             # 2: [img_gmail, link_gmail],
+#             # 3: [img_mobile, link_mobile]
+#             }
 
-img, link = idx2info[idx]
+# img, link = idx2info[idx]
 
-icon_link(img, link)
+# icon_link(img, link)
