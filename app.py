@@ -1,8 +1,4 @@
 import streamlit as st
-import numpy as np
-import pandas as pd
-from PIL import Image
-import time
 from streamlit import write
 from Details import *
 from utils import *
@@ -99,7 +95,7 @@ info = '''
 if button:
 
 
-    n = st.slider('No. of Projects', 3, 8, value=3)
+    n = st.slider('No. of Projects (not updated)', 3, 8, value=3)
 
 
 
@@ -125,7 +121,7 @@ if button:
 ##############################################
 
 do('Education')
-button = st.checkbox('More', value=True, key='1')
+button = st.checkbox('Show', value=True, key='1')
 
 info = '''
 >
@@ -181,7 +177,7 @@ write(info)
 do('Contact Me -')
 
 
-contacts = ('LinkedIn', 'Github', 'G-Mail', 'Mobile')
+contacts = ('LinkedIn', 'Github')#, 'G-Mail', 'Mobile')
 
 contact = st.radio("How do you want to Connect", contacts)
 
